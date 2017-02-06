@@ -95,6 +95,8 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonAnimationType)
     LGPlusButtonAnimationTypeCrossDissolve = 2
 };
 
+@property (nonatomic) BOOL disableUnneededMagic;
+
 @property (assign, nonatomic, readonly, getter=isShowing) BOOL showing;
 @property (assign, nonatomic, readonly, getter=isButtonsShowing) BOOL buttonsShowing;
 @property (assign, nonatomic, getter=isShowHideOnScroll) BOOL showHideOnScroll;

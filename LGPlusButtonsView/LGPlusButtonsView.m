@@ -1266,10 +1266,12 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 
     if (self.isFirstButtonIsPlusButton && index == 0)
     {
-        if (button.isSelected)
-            [self hideButtonsAnimated:YES completionHandler:nil];
-        else
-            [self showButtonsAnimated:YES completionHandler:nil];
+        if (!self.disableUnneededMagic) {
+            if (button.isSelected)
+                [self hideButtonsAnimated:YES completionHandler:nil];
+            else
+                [self showButtonsAnimated:YES completionHandler:nil];
+        }
     }
 
     // -----
